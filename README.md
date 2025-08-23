@@ -16,7 +16,7 @@ Role: Ethical Hacker | Cybersecurity Enthusiast
 Focus: Penetration Testing, Security Research, Digital Forensics
 Motto: "Hack to secure, not to exploit."
 ```
-🌐 **Live Portfolio:** [View Here](https://aman-mishra-ethical-hacker-portfolio.vercel.app/)  
+🌐 **Live Portfolio:** [View Here](https://aman-ethical-hacker-portfolio.vercel.app/)  
 📧 **Email:** amanpavanmishra10@gmail.com  
 🔗 **LinkedIn:** [linkedin.com/in/amanmishra107](https://www.linkedin.com/in/amanmishra107)  
 💻 **GitHub:** [github.com/AmanMishra107](https://github.com/AmanMishra107)  
@@ -26,6 +26,15 @@ Motto: "Hack to secure, not to exploit."
 ## ⚡ Tech Stack
 <p align="center">
 <img src="https://skillicons.dev/icons?i=python,js,html,css,linux,windows,docker,git,github,vscode,angular" />
+</p>
+
+---
+
+## ⚡ Resume
+<p align="center">
+  <a href="resume.pdf" target="_blank">
+    <img src="https://img.shields.io/badge/📄_View_Resume-00C853?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="Resume"/>
+  </a>
 </p>
 
 ---
