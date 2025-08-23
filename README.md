@@ -51,21 +51,6 @@ Motto: "Hack to secure, not to exploit."
 
 ---
 
-## 🎮 Fun Animated Hacking Terminal
-<p align="center">
-  <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" width="600px"/>
-</p>
-
----
-
-## 📊 GitHub Stats
-<p align="center">
-<img src="https://github-readme-stats.vercel.app/api?username=AmanMishra107&show_icons=true&theme=radical" height="150"/>
-<img src="https://github-readme-streak-stats.herokuapp.com?user=AmanMishra107&theme=radical&hide_border=false" height="150"/>
-</p>
-
----
-
 ## 🎨 Hacker ASCII
 ```bash
 ███████╗████████╗██╗  ██╗██╗ ██████╗ █████╗ ██╗         ██╗  ██╗ █████╗  ██████╗██╗  ██╗███████╗██████╗ 
