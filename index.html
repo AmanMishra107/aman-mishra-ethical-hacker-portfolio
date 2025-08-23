@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aman Mishra | Portfolio - Ethical Hacker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Orbitron:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+</head>
+
+<body>
+    <!-- 3D Hacking Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-container">
+            <!-- 3D Cube -->
+            <div class="cube-container">
+                <div class="cube">
+                    <div class="cube-face front">
+                        <div class="terminal-face">
+                            <span class="terminal-line">ANONYMOUS</span>
+                        </div>
+                    </div>
+                    <div class="cube-face back">
+                        <div class="matrix-face">CRACK</div>
+                    </div>
+                    <div class="cube-face left">
+                        <div class="code-face">HACK</div>
+                    </div>
+                    <div class="cube-face right">
+                        <div class="lock-face">SECURE</div>
+                    </div>
+                    <div class="cube-face top">
+                        <div class="shield-face">ENCRYPT</div>
+                    </div>
+                    <div class="cube-face bottom">
+                        <div class="network-face">SCAN</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Matrix Rain Background -->
+            <canvas id="matrix-canvas" class="matrix-canvas"></canvas>
+
+            <!-- Terminal Output -->
+            <div class="terminal-output">
+                <div class="terminal-line">
+                    <span class="prompt">[SYSTEM]</span>
+                    <span class="message">Initializing ethical hacking protocols...</span>
+                </div>
+                <div class="terminal-line">
+                    <span class="prompt">[LOADING]</span>
+                    <span class="message">Decrypting security layers...</span>
+                </div>
+                <div class="terminal-line">
+                    <span class="prompt">[SCAN]</span>
+                    <span class="message">Analyzing network vulnerabilities...</span>
+                </div>
+                <div class="terminal-line">
+                    <span class="prompt">[ACCESS]</span>
+                    <span class="message">Granting secure connection...</span>
+                </div>
+            </div>
+
+            <!-- Interactive Progress Bar -->
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                    <div class="progress-particles"></div>
+                </div>
+                <div class="progress-text">
+                    <span id="progress-percentage">0%</span>
+                    <span class="loading-dots">...</span>
+                </div>
+            </div>
+
+            <!-- Interactive Elements -->
+            <div class="interactive-elements">
+                <div class="floating-icon icon-1"><i class="fas fa-user-secret"></i></div>
+                <!-- Hacker silhouette -->
+                <div class="floating-icon icon-2"><i class="fas fa-lock"></i></div>
+                <!-- Secure lock -->
+                <div class="floating-icon icon-3"><i class="fas fa-terminal"></i></div>
+                <!-- Terminal/CLI -->
+                <div class="floating-icon icon-4"><i class="fas fa-bug"></i></div>
+                <!-- Bug/exploit -->
+            </div>
+            <!-- Click to Skip -->
+            <div class="skip-hint">
+                <span>Click anywhere to skip</span>
+            </div>
+        </div>
+    </div>
+    <!-- Matrix Rain Background -->
+    <div id="matrix-bg"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-bracket">[</span>
+                <span class="logo-text">Aman Mishra</span>
+                <span class="logo-bracket">]</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">home</a></li>
+                <li><a href="#about" class="nav-link">about</a></li>
+                <li><a href="#projects" class="nav-link">projects</a></li>
+                <li><a href="#contact" class="nav-link">contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <span class="btn-close"></span>
+                        <span class="btn-minimize"></span>
+                        <span class="btn-maximize"></span>
+                    </div>
+                    <span class="terminal-title">~/ethical-hacker</span>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-line">
+                        <span class="prompt">root@cybersec:~$</span>
+                        <span class="command" id="typewriter"></span>
+                        <span class="cursor">█</span>
+                    </div>
+                    <div class="terminal-output">
+                        <p>> Initializing ethical hacking protocols...</p>
+                        <p>> Welcome to my cybersecurity portfolio</p>
+                        <p>> Status: <span class="status-online">ONLINE</span></p>
+                    </div>
+                </div>
+            </div>
+            <h1 class="hero-title">
+                <span class="glitch" data-text="ETHICAL HACKER">ETHICAL HACKER</span>
+            </h1>
+            <p class="hero-subtitle">Penetration Testing • Security Research • Digital Forensics</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn-primary">View Projects</a>
+                <a href="#contact" class="btn-secondary">Hire Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="section-number">01.</span> About Me
+            </h2>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a passionate ethical hacker and cybersecurity specialist with expertise in penetration
+                        testing, vulnerability assessment, and digital forensics. My mission is to help organizations
+                        strengthen their security posture through responsible
+                        disclosure and comprehensive security audits.</p>
+                    <p>With a background in computer science and multiple industry certifications, I stay current with
+                        the latest threats and defense mechanisms in the ever-evolving cybersecurity landscape.</p>
+                </div>
+
+                <div class="about-image">
+                    <div class="hacker-avatar">
+                        <div class="avatar-frame">
+                            <div class="avatar-content flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <img src="assets/profile.png" alt="Hacker Avatar" class="avatar-image" />
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <img src="assets/favicon.png" alt="Hacker Avatar Back" class="avatar-image" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="certifications-section">
+                <div class="certifications">
+                    <h3>Professional Certifications</h3>
+                    <div class="certifications-grid">
+                        <div class="cert-card">
+                            <div class="cert-badge">✓</div>
+                            <div class="cert-title">PCACS</div>
+                            <div class="cert-image-container">
+                                <!-- Replace src with your actual certificate image path -->
+                                <img src="assets/certificate/1_page-0001.jpg" alt="CEH Certificate" class="cert-image"
+                                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="cert-placeholder" style="display: none;">🛡️</div>
+                            </div>
+                            <div class="cert-description">Cybersecurity and Digital Forensics</div>
+                        </div>
+
+                        <div class="cert-card">
+                            <div class="cert-badge">✓</div>
+                            <div class="cert-title">Spoken Tutorial</div>
+                            <div class="cert-image-container">
+                                <!-- Replace src with your actual certificate image path -->
+                                <img src="assets/certificate/2_page-0001.jpg" alt="OSCP Certificate" class="cert-image"
+                                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="cert-placeholder" style="display: none;">⚔️</div>
+                            </div>
+                            <div class="cert-description">Python Programming</div>
+                        </div>
+
+                        <div class="cert-card">
+                            <div class="cert-badge">✓</div>
+                            <div class="cert-title">Udemy</div>
+                            <div class="cert-image-container">
+                                <!-- Replace src with your actual certificate image path -->
+                                <img src="assets/certificate/3_page-0001.jpg" alt="CISSP Certificate" class="cert-image"
+                                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="cert-placeholder" style="display: none;">🔒</div>
+                            </div>
+                            <div class="cert-description">Hacking and Penetration Testing</div>
+
+                        </div>
+
+                        <div class="cert-card">
+                            <div class="cert-badge">✓</div>
+                            <div class="cert-title">Rst Forum</div>
+                            <div class="cert-image-container">
+                                <!-- Replace src with your actual certificate image path -->
+                                <img src="assets/certificate/4_page-0001.jpg" alt="Security+ Certificate"
+                                    class="cert-image"
+                                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="cert-placeholder" style="display: none;">🔐</div>
+                            </div>
+                            <div class="cert-description">Certified Ethical Hacker</div>
+
+                        </div>
+
+                        <div class="cert-card">
+                            <div class="cert-badge">✓</div>
+                            <div class="cert-title">IBM</div>
+                            <div class="cert-image-container">
+                                <!-- Replace src with your actual certificate image path -->
+                                <img src="assets/certificate/5_page-0001.jpg" alt="GCIH Certificate" class="cert-image"
+                                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="cert-placeholder" style="display: none;">🌐</div>
+                            </div>
+                            <div class="cert-description">Cybersecurity Fundamentals</div>
+                        </div>
+
+                        <div class="cert-card">
+                            <div class="cert-badge">✓</div>
+                            <div class="cert-title">Deloitte</div>
+                            <div class="cert-image-container">
+                                <!-- Replace src with your actual certificate image path -->
+                                <img src="assets/certificate/6_page-0001.jpg" alt="GCFA Certificate" class="cert-image"
+                                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="cert-placeholder" style="display: none;">🔍</div>
+                            </div>
+                            <div class="cert-description">Cyber Job Simulation</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="section-number">02.</span> Tech Stack & Skills
+            </h2>
+            <div class="skills-grid">
+
+                <!-- Penetration Testing -->
+                <div class="skill-category">
+                    <h3>Penetration Testing</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag metasploit"><i class="fa-solid fa-bug"></i> Metasploit</span>
+                        <span class="skill-tag burpsuite"><i class="fa-solid fa-shield-halved"></i> Burp Suite</span>
+                        <span class="skill-tag nmap"><i class="fa-solid fa-network-wired"></i> Nmap</span>
+                        <span class="skill-tag wireshark"><i class="fa-solid fa-water"></i> Wireshark</span>
+                        <span class="skill-tag hydra"><i class="fa-solid fa-hydra"></i> Hydra</span>
+                        <!-- fallback generic icon since no fa-hydra -->
+                        <span class="skill-tag aircrack"><i class="fa-solid fa-wifi"></i> Aircrack-ng</span>
+                        <span class="skill-tag johntheripper"><i class="fa-solid fa-user-secret"></i> John the
+                            Ripper</span>
+                    </div>
+
+                </div>
+
+                <!-- Programming -->
+                <div class="skill-category">
+                    <h3>Programming</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag python"><i class="fa-brands fa-python"></i> Python</span>
+                        <span class="skill-tag bash"><i class="fa-brands fa-linux"></i> Bash</span>
+                        <span class="skill-tag powershell"><i class="fa-brands fa-windows"></i> PowerShell</span>
+                        <span class="skill-tag javascript"><i class="fa-brands fa-js"></i> JavaScript</span>
+                        <span class="skill-tag angular"><i class="fa-brands fa-angular"></i> Angular</span>
+                        <span class="skill-tag css"><i class="fa-brands fa-css3-alt"></i> CSS</span>
+                        <span class="skill-tag html"><i class="fa-brands fa-html5"></i> HTML</span>
+                        <span class="skill-tag sql"><i class="fa-solid fa-database"></i> SQL</span>
+                    </div>
+
+                </div>
+
+                <!-- Operating Systems -->
+                <div class="skill-category">
+                    <h3>Operating Systems</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag kali-linux"><i class="fa-brands fa-linux"></i> Kali Linux</span>
+                        <span class="skill-tag parrot-os"><i class="fa-brands fa-linux"></i> Parrot OS</span>
+                        <span class="skill-tag windows"><i class="fa-brands fa-windows"></i> Windows</span>
+                        <span class="skill-tag macos"><i class="fa-brands fa-apple"></i> macOS</span>
+                        <span class="skill-tag ubuntu"><i class="fa-brands fa-ubuntu"></i> Ubuntu</span>
+                        <span class="skill-tag linux"><i class="fa-brands fa-linux"></i> Linux</span>
+                    </div>
+
+                </div>
+
+                <!-- Digital Forensics -->
+                <div class="skill-category">
+                    <h3>Digital Forensics</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag autopsy"><i class="fa-solid fa-search"></i> Autopsy</span>
+                        <span class="skill-tag volatility"><i class="fa-solid fa-bolt"></i> Volatility</span>
+                        <span class="skill-tag ftk"><i class="fa-solid fa-database"></i> FTK Imager</span>
+                        <span class="skill-tag xways"><i class="fa-solid fa-cubes"></i> X-Ways Forensics</span>
+                    </div>
+
+                </div>
+
+                <!-- Security Tools -->
+                <div class="skill-category">
+                    <h3>Security Tools</h3>
+                    <div class="skill-items">
+                        <!-- Basic -->
+                        <span class="skill-tag ping"><i class="fa-solid fa-signal"></i> Ping</span>
+                        <span class="skill-tag traceroute"><i class="fa-solid fa-route"></i> Traceroute</span>
+                        <span class="skill-tag netstat"><i class="fa-solid fa-network-wired"></i> Netstat</span>
+                        <span class="skill-tag wget"><i class="fa-solid fa-down-left-and-up-right-to-center"></i>
+                            Wget</span>
+                        <span class="skill-tag telnet"><i class="fa-solid fa-terminal"></i> Telnet</span>
+                        <!-- Intermediate -->
+                        <span class="skill-tag nikto"><i class="fa-solid fa-shield-virus"></i> Nikto</span>
+                        <span class="skill-tag hashcat"><i class="fa-solid fa-key"></i> Hashcat</span>
+                    </div>
+
+                </div>
+                <div class="skill-category">
+                    <h3>Platforms & Environments</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag virtualbox"><i class="fa-solid fa-cube"></i> VirtualBox</span>
+                        <span class="skill-tag vmware"><i class="fa-solid fa-server"></i> VMware Workstation</span>
+                        <span class="skill-tag docker"><i class="fa-brands fa-docker"></i> Docker</span>
+                        <span class="skill-tag vscode"><i class="fa-solid fa-code"></i> Visual Studio Code</span>
+                        <span class="skill-tag pycharm"><i class="fa-solid fa-laptop-code"></i> PyCharm</span>
+                        <span class="skill-tag postman"><i class="fa-solid fa-paper-plane"></i> Postman</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="section-number">03.</span> Projects
+            </h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Crypto Encryption Tool</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/AmanMishra107/SimpleCrypto" target="_blank"
+                                class="project-link"><i class="fa-brands fa-github"></i></a>
+
+                        </div>
+                    </div>
+                    <p>
+                        A Python-based encryption utility implementing Caesar Cipher, AES, and Blowfish algorithms using
+                        PyCryptodome. Demonstrates both classical and modern cryptographic techniques for secure data
+                        handling.
+                    </p>
+                    <div class="project-tech">
+                        <span><i class="fa-brands fa-python"></i> Python</span>
+                        <span><i class="fa-solid fa-lock"></i> PyCryptodome</span>
+                        <span><i class="fa-solid fa-scroll"></i> Caesar Cipher</span>
+                        <span><i class="fa-solid fa-key"></i> AES</span>
+                        <span><i class="fa-solid fa-shield-alt"></i> Blowfish</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Python Keylogger</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/AmanMishra107/keylogger" target="_blank" class="project-link"><i
+                                    class="fa-brands fa-github"></i></a>
+
+                        </div>
+                    </div>
+                    <p>
+                        A simple Python-based keylogger built for educational and ethical hacking purposes. It captures
+                        keystrokes with timestamps and saves them to a local file for analysis.
+                    </p>
+                    <div class="project-tech">
+                        <span><i class="fa-brands fa-python"></i> Python</span>
+                        <span><i class="fa-solid fa-keyboard"></i> pynput</span>
+                        <span><i class="fa-solid fa-key"></i> Keylogging</span>
+                        <span><i class="fa-solid fa-shield-halved"></i> Ethical Hacking</span>
+                    </div>
+
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Windows Security Assessment</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/AmanMishra107/windows-security-assesment" target="_blank"
+                                class="project-link">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                    <p>
+                        Conducted a security assessment of a Windows 10 environment by configuring OpenSSH, tweaking
+                        firewall rules, and probing vulnerabilities via SSH, RDP, and SMB using Hydra and CrackMapExec.
+                    </p>
+                    <div class="project-tech">
+                        <span><i class="fa-brands fa-windows"></i> Windows 10</span>
+                        <span><i class="fa-solid fa-terminal"></i> OpenSSH</span>
+                        <span><i class="fa-solid fa-shield-halved"></i> Firewall Configuration</span>
+                        <span><i class="fa-solid fa-network-wired"></i> Hydra</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Tools Section -->
+    <section id="tools" class="section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="section-number">04.</span> Interactive Tools & Games
+            </h2>
+            <div class="tools-grid">
+
+                <div class="tool-card">
+                    <h3><i class="fa-solid fa-lock"></i> Password Strength Checker</h3>
+                    <div class="tool-content" style="position: relative; max-width: 350px;">
+                        <input type="password" id="password-input" placeholder="Enter password to test"
+                            style="width: 100%; padding-right: 40px; box-sizing: border-box;">
+                        <button id="toggle-password" aria-label="Toggle password visibility" style="
+                    position: absolute;
+                    right: 10px;
+                    top: 20%;
+                    transform: translateY(-50%);
+                    background: transparent;
+                    border: none;
+                    cursor: pointer;
+                    color: #00ff88;
+                    font-size: 1.2rem;
+                    outline: none;
+                    transition: color 0.3s ease;
+                ">
+                            <i class="fa-regular fa-eye"></i>
+                        </button>
+                        <div class="strength-meter" style="margin-top: 12px;">
+                            <div class="strength-bar" id="strength-bar"></div>
+                        </div>
+                        <div class="strength-text" id="strength-text">Enter a password</div>
+                    </div>
+                </div>
+
+
+                <!-- Network Port Scanner -->
+                <div class="tool-card">
+                    <h3><i class="fa-solid fa-globe"></i> Network Port Scanner</h3>
+                    <div class="tool-content">
+                        <input type="text" id="host-input" placeholder="Enter IP or domain">
+                        <button id="scan-btn" class="tool-btn"><i class="fa-solid fa-magnifying-glass"></i> Scan
+                            Ports</button>
+                        <div class="scan-results" id="scan-results"></div>
+                    </div>
+                </div>
+
+                <!-- Hash Generator -->
+                <div class="tool-card">
+                    <h3><i class="fa-solid fa-hammer"></i> Hash Generator</h3>
+                    <div class="tool-content">
+                        <input type="text" id="hash-input" placeholder="Enter text to hash">
+                        <select id="hash-type">
+                            <option value="md5">MD5</option>
+                            <option value="sha1">SHA-1</option>
+                            <option value="sha256">SHA-256</option>
+                        </select>
+                        <button id="hash-btn" class="tool-btn"><i class="fa-solid fa-bolt"></i> Generate Hash</button>
+                        <div class="hash-output" id="hash-output"></div>
+                    </div>
+                </div>
+
+                <!-- Terminal Hacking Game -->
+                <div class="tool-card">
+                    <h3><i class="fa-solid fa-terminal"></i> Terminal Hacking Game</h3>
+                    <div class="tool-content">
+                        <div class="hacking-game">
+                            <div class="game-terminal">
+                                <div class="game-header">
+                                    <div class="game-title">HACK THE SYSTEM</div>
+                                    <div class="game-timer">Time: <span id="game-timer">60</span>s</div>
+                                </div>
+                                <div class="game-content" id="game-content">
+                                    <div class="game-instructions">
+                                        <i class="fa-solid fa-bullseye"></i> Find the hidden password in the code
+                                        matrix!<br>
+                                        <i class="fa-solid fa-lightbulb"></i> Type the highlighted sequence to hack the
+                                        system<br>
+                                        <i class="fa-solid fa-bolt"></i> Beat the timer to succeed!
+                                    </div>
+                                </div>
+                                <div class="game-input-area">
+                                    <input type="text" id="game-input" placeholder="Enter sequence..." disabled>
+                                    <button id="start-game-btn" class="tool-btn"><i class="fa-solid fa-rocket"></i>
+                                        Start Hack</button>
+                                </div>
+                                <div class="game-status" id="game-status">Ready to hack...</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- WiFi Signal Analyzer -->
+                <div class="tool-card">
+                    <h3><i class="fa-solid fa-wifi"></i> WiFi Signal Analyzer</h3>
+                    <div class="tool-content">
+                        <button id="wifi-scan-btn" class="tool-btn"><i class="fa-solid fa-tower-broadcast"></i> Scan
+                            Networks</button>
+                        <div class="wifi-results" id="wifi-results"></div>
+                    </div>
+                </div>
+
+                <!-- Encryption Playground -->
+                <div class="tool-card">
+                    <h3><i class="fa-solid fa-user-secret"></i> Encryption Playground</h3>
+                    <div class="tool-content">
+                        <textarea id="encrypt-input" placeholder="Enter text to encrypt..."></textarea>
+                        <select id="cipher-type">
+                            <option value="caesar">Caesar Cipher</option>
+                            <option value="base64">Base64</option>
+                            <option value="reverse">Reverse</option>
+                        </select>
+                        <button id="encrypt-btn" class="tool-btn"><i class="fa-solid fa-lock"></i> Encrypt</button>
+                        <div class="encrypt-output" id="encrypt-output"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Download Section -->
+    <section id="resume" class="section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="section-number">05.</span> Access Credentials
+            </h2>
+            <div class="resume-terminal">
+                <div class="resume-header">
+                    <div class="terminal-buttons">
+                        <span class="btn-close"></span>
+                        <span class="btn-minimize"></span>
+                        <span class="btn-maximize"></span>
+                    </div>
+                    <span class="terminal-title">~/download/resume</span>
+                </div>
+                <div class="resume-body">
+                    <div class="resume-content">
+                        <div class="file-tree">
+                            <div class="file-item"><i class="fa-solid fa-folder"></i> credentials/</div>
+                            <div class="file-item">├── <i class="fa-regular fa-file-pdf"></i> resume.pdf</div>
+                            <a href="#about" style="text-decoration: none; color: inherit;">
+                                <div class="file-item">
+                                    ├── <i class="fa-solid fa-award"></i> certifications.zip
+                                </div>
+                            </a>
+
+                            <div class="file-item">└── <i class="fa-solid fa-terminal"></i> aman_mishra.txt</div>
+
+                        </div>
+
+                        <div class="download-interface">
+                            <div class="hack-prompt">
+                                <span class="prompt">root@cybersec:~$</span>
+                                <span class="command">cat> download_resume.sh</span>
+                            </div>
+                            <div class="download-buttons">
+                                <button class="download-btn" id="resume-download">
+                                    <i class="fa-solid fa-download download-icon"></i>
+                                    <span class="download-text">./download_resume.pdf</span>
+                                    <span class="download-progress" id="download-progress"></span>
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="section-number">06.</span> Establish Connection
+            </h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p>Ready to secure your digital assets? Let's discuss how I can help strengthen your security
+                        posture.</p>
+                    <div class="contact-details">
+                        <div class="contact-item hacker-email">
+                            <i class="fa-solid fa-envelope contact-icon"></i>
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=amanpavanmishra10@gmail.com&su=Hello%20from%20Your%20Website&body=Hi%20Aman,%0D%0A%0D%0AI%20would%20like%20to%20get%20in%20touch%20with%20you%20regarding..."
+                                class="email-text" target="_blank" rel="noopener noreferrer">
+                                amanpavanmishra10@gmail.com
+                            </a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-phone contact-icon"></i>
+                            <a href="tel:+919834248447" style="color: inherit; text-decoration: none;">
+                                +91 9834248447
+                            </a>
+                        </div>
+
+                        <div class="contact-item hacker-location">
+                            <i class="fa-solid fa-location-dot contact-icon"></i>
+                            <span class="location-text">Navi Mumbai | India</span>
+                        </div>
+
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://github.com/AmanMishra107" class="social-link"><i
+                                class="fa-brands fa-github"></i> </a>
+                        <a href="https://www.linkedin.com/in/amanmishra107/" class="social-link"><i
+                                class="fa-brands fa-linkedin"></i> </a>
+                        <a href="https://x.com/AmanMishra107" class="social-link"><i
+                                class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.instagram.com/aman.mishra__107/" class="social-link"><i
+                                class="ri-instagram-line"></i> </a>
+                    </div>
+                </div>
+                <form class="contact-form" action="https://formspree.io/f/xdkdjnyz" method="POST" target="_blank">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required>
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" required></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 <span style="color: green;">Aman Mishra</span> Portfolio. Built with 💚 for security.</p>
+        </div>
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
