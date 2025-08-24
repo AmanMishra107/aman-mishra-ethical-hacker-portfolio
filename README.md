@@ -83,9 +83,7 @@ open index.html    # Mac
 
 ---
 
-<p align="center">
-  <img src="https://media.giphy.com/media/3o7btMCltyDvSgF92E/giphy.gif" width="500px" />
-</p>
+
 <h1 align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=35&duration=4000&pause=1000&color=00FF41&center=true&vCenter=true&width=1000&lines=👋+Hello+World!;I'm+Aman+Mishra;⚡+Ethical+Hacker+%7C+Cybersecurity+Specialist;🚀+PenTesting+%7C+Forensics+%7C+Red+Team+Ops;💻+Always+Hacking+for+Good!" />
 </h1>
